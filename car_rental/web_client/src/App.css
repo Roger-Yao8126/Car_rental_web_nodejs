@@ -1,0 +1,153 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.login-page {
+  background-image: url("./assets/rentacar.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vehicle-item__main-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.vehicle-item__image {
+  display: block;
+  width: 350px;
+}
+
+.vehicle-item__summary, .vehicle-item__toggle-details-button {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.vehicle-item__tour-info {
+  display: none;
+}
+
+.vehicle-item__title {
+  color: #181918;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.vehicle-item__models {
+  color: #656565;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.vehicle-item__attributes {
+  margin-bottom: 45px;
+  color: #656565;
+}
+
+.vehicle-item__attribute-item {
+  display: inline-block;
+  margin-right: 1.25em;
+  color: #393a3b;
+}
+
+.vehicle-item__attribute-item .icon {
+  display: inline-block;
+  margin-right: 0.5em;
+  height: 1em;
+  width: 1em;
+  vertical-align: middle;
+}
+
+.vehicle-item__summary, .vehicle-item__pricing {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.vehicle-item__pricing {
+  width: 300px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.vehicle-pricing__base-header {
+  border-bottom: 1px solid #c3c3c3;
+  background-color: transparent;
+}
+
+.vehicle-pricing__base-heading {
+  font-weight: 700;
+  font-style: normal;
+  color: #181918;
+  text-transform: uppercase;
+}
+
+.vehicle-pricing__currency-tiles, .vehicle-pricing__na-prepay-tiles, .vehicle-pricing__na-prepay-buttons {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.price-tile {
+  position: relative;
+  margin: 10px 0;
+  font-size: inherit;
+}
+
+.price-tile__amount {
+  margin-bottom: 5px;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.price-tile__amount .symbol, .price-tile__amount .unit, .price-tile__amount .fraction {
+  display: inline-block;
+  position: initial;
+  margin: 0 1px;
+  vertical-align: inherit;
+  font-size: inherit;
+  line-height: 1;
+}
+
+.price-tile__label {
+  color: #656565;
+}

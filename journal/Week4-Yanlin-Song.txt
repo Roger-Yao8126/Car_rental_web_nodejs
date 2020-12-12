@@ -1,0 +1,15 @@
+Week 3 Scrum Report [3/16/2020-3/22/2020]
+
+Yanlin Song
+
+What you have done
+
+Write add credit card model, type. In resolver, addcreditcard, delete and update. 
+
+What you are planning to do
+
+search which front end is better.
+
+
+Time Spent
+10 hrs

@@ -1,0 +1,5 @@
+TESTING=True
+DEBUG=True
+FLASK_ENV=development
+DATABASE_URI=<YOUR_MONGODB_DATABASE_URL, for exmaple: "mongodb://localhost/test">
+JWT_SECRET=<YOUR_JWT_SECRET>

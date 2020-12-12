@@ -1,0 +1,15 @@
+Week 6 Scrum Report [3/30/2020-4/06/2020]
+
+Yanlin Song
+
+What you have done
+
+Search availiable time when user gave a time interval
+
+For example, user want to findout when a car availiable
+from 5/1/2020 8am to 5/1/2020 8pm
+This function will return a list of availiable time
+include all the small segment
+
+Time Spend
+More than 10 hrs

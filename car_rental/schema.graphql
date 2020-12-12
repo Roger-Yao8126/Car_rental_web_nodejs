@@ -1,0 +1,351 @@
+input vehiclesFilter {
+  gte: Float
+  lte: Float
+  gt: Float
+  lt: Float
+}
+
+type Query {
+  reservation(id: String!): Reservation
+  search_user_reservations(
+    status: String
+    start_time: String
+    end_time: String
+    actual_start_time: String
+    actual_end_time: String
+  ): [Reservation]
+  reservations(
+    user_id: String
+    status: String
+    start_time: String
+    end_time: String
+    actual_start_time: String
+    actual_end_time: String
+  ): [Reservation]
+  vehicles(
+    location: String
+    default_hourly_rate: vehiclesFilter
+    make: String
+    model: String
+    vehicle_type: String
+    year: Int
+    available_from: String
+    to: String,
+    is_active: Boolean
+  ): [Vehicle]
+  vehicle(id: String!): Vehicle
+  vehicle_types: [VehicleType]
+  vehicle_type(id: String!): VehicleType
+  membership(id: String!): Membership
+  creditcardinfo(id: String!): CreditCardInfo
+  user(id: String!): User
+  searchUsers(
+    email: String
+    username: String
+    dl_state: String
+    dl_number: String
+    mobile_phone: String
+    age: Int
+    registration_date: String
+  ): [User]
+  userbytoken: User
+  searchLocations(
+    name: String
+    capacity: Int
+    address: String
+    geo: [Float]
+  ): [Location]
+  location(id: String!): Location
+  login(email: String!, pw: String!): Token
+  get_available_time(
+    id: String!
+    start_time: String!
+    end_time: String!
+  ): [Available_interval]
+  parameter(description: String!): ParameterInfo
+  parameterinfos: [ParameterInfo]
+  parameterinfo(id: String): ParameterInfo
+  checkReservationTimeAvailable(
+    vehicle_id: String!
+    available_from: String!
+    available_to: String!
+  ): Boolean
+}
+
+type Mutation {
+  addVehicle(
+    vehicle_type: String!
+    default_hourly_rate: Float!
+    make: String!
+    model: String!
+    year: Int!
+    registration_tag: String!
+    current_mileage: Float!
+    condition: String!
+    capacity: Int!
+    images: [String!]
+    location_id: String
+  ): Vehicle
+  updateVehicle(
+    id: String!,
+    make: String,
+    registration_tag: String,
+    condition: String,
+    location_id: String,
+    default_hourly_rate: Float
+  ): Vehicle
+  delVehicle(id: String!): Vehicle
+  addVehicleType(name: String!, hourly_rate: Float!): VehicleType
+  updateVehicleType(id: String!, name: String, hourly_rate: Float): VehicleType
+  delVehicleType(id: String!): VehicleType
+  admin_close_reservation(
+    id: String!
+    admin_note: String
+    normal_price: Float
+    penalty_fee: Float
+  ): Reservation
+  generate_unpaid_reservation(
+    vehicle_id: String!
+    start_time: String!
+    end_time: String!
+  ): Reservation
+
+  token_add_reservation(
+    vehicle_id: String!
+    start_time: String!
+    end_time: String!
+  ): Reservation
+
+  user_pay_reservation(id: String!): Reservation
+
+  updateReservation(
+    id: String!
+    reservation_price: Float
+    penalty_fee: Float
+    start_time: String
+    end_time: String
+    status: String
+  ): Reservation
+  delReservation(id:String!): Reservation
+  cancel_reservation(id: String!): Reservation
+  user_pickup_car(id: String!, actual_start_time: String!): Reservation
+  user_return_car(id: String!, actual_end_time: String!, comment: String): Reservation
+
+  addLocation(
+    name: String!
+    address: String!
+    capacity: Int!
+    geo: [Float!]!
+  ): Location
+  updateLocation(
+    id: String!
+    name: String
+    address: String
+    capacity: Int
+    geo: [Float]
+  ): Location
+
+  delLocation(location_id: String!): Location
+
+  newMembership(
+    user_id: String!
+    start_date: String!
+    last_renew_date: String!
+    is_active: Boolean!
+  ): Membership
+  delMembership(id: String!): Membership
+  updateMembership(
+    id: String!
+    user_id: String
+    start_date: String
+    last_renew_date: String
+    is_active: Boolean
+  ): Membership
+  newCreditCardInfo(
+    user_id: String!
+    credit_card_number: String!
+    card_holder_name: String!
+    billing_address: String!
+    exp_date: String!
+  ): CreditCardInfo
+  delCreditCardInfo(id: String!): CreditCardInfo
+  updateCreditCardInfo(
+    id: String!
+    user_id: String
+    credit_card_number: String
+    card_holder_name: String
+    billing_address: String
+    exp_date: String
+  ): CreditCardInfo
+  newUser(
+    email: String!
+    password: String!
+    username: String!
+    address: String!
+    dl_state: String!
+    dl_number: String!
+    mobile_phone: String!
+    age: Int!
+    registration_date: String!
+    credit_card_info: CreditCardInfoInput
+    membership: MembershipInput
+    role: String!
+    is_active: Boolean!
+  ): Token
+
+  delUser(id: String!): User
+  updateUser(
+    id: String!
+    email: String
+    password: String
+    username: String
+    address: String
+    dl_state: String
+    dl_number: String
+    mobile_phone: String
+    age: Int
+    registration_date: String
+    credit_card_info: String
+    membership: String
+    role: String
+    is_active: Boolean
+  ): User
+  addComment(
+    vehicle_id: String!
+    comment_content: String!
+    comment_time: String
+  ): Comment
+  updateParameterInfo(
+    id: String!
+    description: String
+    rate: Float
+  ): ParameterInfo
+}
+
+type Reservation {
+  id: String
+  vehicle: Vehicle
+  user: User
+  normal_price: Float
+  penalty_fee: Float
+
+  start_time: String
+  end_time: String
+
+  actual_start_time: String
+  actual_end_time: String
+
+  status: String
+  comment: String
+  admin_note: String
+}
+
+type Vehicle {
+  id: String!
+  vehicle_type: VehicleType!
+  default_hourly_rate: Float!
+  make: String!
+  model: String!
+  year: Int!
+  registration_tag: String!
+  current_mileage: Float!
+  condition: String!
+  capacity: Int!
+  location: Location
+  last_service_time: String!
+  is_available: Boolean!
+  reservation: [Reservation]
+  images: [String]
+  comments: [Comment]
+}
+
+type VehicleType {
+  id: String!
+  name: String!
+  hourly_rate: Float
+}
+
+type Membership {
+  id: String
+  user_id: String
+  start_date: String!
+  last_renew_date: String!
+  is_active: Boolean!
+}
+
+type CreditCardInfo {
+  user_id: String
+  id: String
+  credit_card_number: String!
+  card_holder_name: String!
+  billing_address: String!
+  exp_date: String!
+}
+
+type User {
+  id: String
+  email: String!
+  password: String!
+  username: String!
+  address: String!
+  dl_state: String!
+  dl_number: String!
+  mobile_phone: String!
+  age: Int!
+  registration_date: String!
+  credit_card_info: CreditCardInfo!
+  membership: Membership!
+  reservation: [Reservation]
+  role: String!
+  is_active: Boolean!
+}
+
+input MembershipInput {
+  start_date: String!
+  last_renew_date: String!
+  is_active: Boolean!
+}
+
+input CreditCardInfoInput {
+  credit_card_number: String!
+  card_holder_name: String!
+  billing_address: String!
+  exp_date: String!
+}
+
+type Location {
+  id: String!
+  name: String!
+  address: String!
+  capacity: Int!
+  geo: Geo
+}
+
+type Token {
+  token: String!
+  role: String!
+  membership_expiration_date: String
+}
+
+type Available_interval {
+  available_from: String!
+  to: String!
+}
+
+type Comment {
+  id: String
+  comment_content: String!
+  comment_time: String!
+  user: User!
+}
+
+type ParameterInfo {
+  id: String
+  description: String!
+  rate: Float!
+}
+
+type Geo {
+  type: String
+  coordinates: [Float]
+}

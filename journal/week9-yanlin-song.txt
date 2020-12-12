@@ -1,0 +1,17 @@
+Week 9 Scrum Report [4/21/2020-4/27/2020]
+
+Yanlin Song
+
+What you have done
+
+Structure change
+
+Remove booking and contract class from model, replace with reservation
+
+rewrite and remove all the booking and contract keywords 
+
+rewrite query and mutation
+
+Time spend
+
+15 hrs

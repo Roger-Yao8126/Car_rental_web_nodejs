@@ -1,0 +1,15 @@
+Week 7 Scrum Report [4/7/2020-4/13/2020]
+
+Yanlin Song
+
+What you have done
+
+Learn how to use mongoengine date time field.
+
+Finish first part of car searching
+
+When user provide many search arguement, it can filter the keywords
+and return a list of cars.
+
+Time Spend
+10hrs

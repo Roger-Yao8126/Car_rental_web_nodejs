@@ -1,0 +1,10 @@
+**/.DS_Store
+**/__pycache__
+car_rental/data/car.json
+car_rental/data/location.json
+car_rental/data/newLoc.json
+car_rental/Pipfile.lock
+car_rental/.flaskenv
+car_rental/__pycache__
+car_rental/logfile.md
+car_rental/query.md

@@ -1,0 +1,20 @@
+Week 8 Scrum Report [4/14/2020-4/20/2020]
+
+Yanlin Song
+
+What you have done
+
+Modify ingest location file
+
+ingest test location file to databse for better testing
+
+update user car searching function
+
+if there is no availiable car for the info that user pervide
+auto suggest cars in different location but have similar other feature
+
+If there is no similar cars in other location, then return null
+
+Time spend 
+
+15 hrs

@@ -1,0 +1,15 @@
+Week 5 Scrum Report [3/23/2020-3/29/2020]
+
+Yanlin Song
+
+What you have done
+
+catchup current progress
+
+What you are planning to do
+
+write a resolver to check when a vehicle is available. 
+
+
+Time Spent
+10 hrs
