@@ -1,5 +1,3 @@
-# Team: Team 404/2
-
 ## Demos:
   (Requires an SJSU email in order to access)
   - [Customer Use Case Demo](https://drive.google.com/file/d/1CMTmwXb9jnZ9Jq5pVePzkTYAoC_TO4x0/view?usp=sharing)
@@ -11,36 +9,14 @@
   - [Presentation Slide](https://github.com/gopinathsjsu/sp20-cmpe-202-sec-03-team-project-team-404-2/blob/master/docs/CMPE-202-presentation.pptx)
 
 ## Team Members: 
-    Shengtao Li (7seven7lst): car reservation, login and authentication, function of admin, AWS
-    Kuang Sheng (cookiebaker444):  location and Map function, user profile, function of admin
-    Yanlin Song (YS-RF): car search, price strategy design and implementation, function of admin
-    Xuejun Yao (Roger-Yao8126): process the booking and generate contract, pay the bill, function of admin
-
-## XP Values:
-  - Communication: Weekly group meeting, share progress, ask for help
-  - Feedback: Backend frontend corporation
-  - Simplicity: Remove redundancy, focusing on requirement 
-  - Respect: Show opinion proper way
-  - Courage: When facing challenge, help each other
-
-  [Detailed XP Values](https://github.com/gopinathsjsu/sp20-cmpe-202-sec-03-team-project-team-404-2/blob/master/docs/XP_Value.md)
+    Xuejun Yao (Roger-Yao8126)
+    Shengtao Li (7seven7lst)
+    Kuang Sheng (cookiebaker444)
+    Yanlin Song (YS-RF)
 
 ## Project Description:
   This project is a full stack car rental web application following the CMPE-202 group project requirement. This web application provide all the service that a car rental company can provide, and has no age limitation.
   
-  [Project Requirement Doc](https://github.com/gopinathsjsu/sp20-cmpe-202-sec-03-team-project-team-404-2/blob/master/docs/Rent.pdf)
-
-## Project Feature Set:
-  [List of Project features](https://github.com/gopinathsjsu/sp20-cmpe-202-sec-03-team-project-team-404-2/blob/master/docs/features_of_web.docx)
-
-
-## Project Journal:
- [Project Journal](https://github.com/gopinathsjsu/sp20-cmpe-202-sec-03-team-project-team-404-2/tree/master/journal)
-
-
-## Project Sprint Task Sheet:
-[Project Sprint Task Sheet](https://github.com/gopinathsjsu/sp20-cmpe-202-sec-03-team-project-team-404-2/tree/master/docs/sprint_task_sheet.xlsx)
-
 
 ## Project Architecture and Technical Stacks:
 
