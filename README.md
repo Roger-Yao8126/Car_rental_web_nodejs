@@ -1,18 +1,3 @@
-## Demos:
-  (Requires an SJSU email in order to access)
-  - [Customer Use Case Demo](https://drive.google.com/file/d/1CMTmwXb9jnZ9Jq5pVePzkTYAoC_TO4x0/view?usp=sharing)
-  - [User Account and Admin functionality part I](https://drive.google.com/file/d/1pD8eqTaMm69a0asqDw7caci6SWjDbLcO/view?usp=sharing)
-  - [Admin functionality Part II](https://drive.google.com/file/d/1UH8gqi3uG63jDIIrEeLsdvf_MYZu5xfO/view?usp=sharing)
-  - [Auto Scaling](https://drive.google.com/file/d/1GkoK_rHwkBRWsQUhpSxHUK0BP87gDpOG/view?usp=sharing)
-
-## Presentation Slide:
-  - [Presentation Slide](https://github.com/gopinathsjsu/sp20-cmpe-202-sec-03-team-project-team-404-2/blob/master/docs/CMPE-202-presentation.pptx)
-
-## Team Members: 
-    Xuejun Yao (Roger-Yao8126)
-    Shengtao Li (7seven7lst)
-    Kuang Sheng (cookiebaker444)
-    Yanlin Song (YS-RF)
 
 ## Project Description:
   This project is a full stack car rental web application following the CMPE-202 group project requirement. This web application provide all the service that a car rental company can provide, and has no age limitation.
@@ -97,3 +82,20 @@ To import car data into remote atlas db:
 #### Helper method
 * `@auth_required` decorator in resolver to indicate user must be logged in
 * `@admin_required` decorator in resolver to indicate user must be admin in order to call this resolver
+
+## Demos:
+  (Requires an SJSU email in order to access)
+  - [Customer Use Case Demo](https://drive.google.com/file/d/1CMTmwXb9jnZ9Jq5pVePzkTYAoC_TO4x0/view?usp=sharing)
+  - [User Account and Admin functionality part I](https://drive.google.com/file/d/1pD8eqTaMm69a0asqDw7caci6SWjDbLcO/view?usp=sharing)
+  - [Admin functionality Part II](https://drive.google.com/file/d/1UH8gqi3uG63jDIIrEeLsdvf_MYZu5xfO/view?usp=sharing)
+  - [Auto Scaling](https://drive.google.com/file/d/1GkoK_rHwkBRWsQUhpSxHUK0BP87gDpOG/view?usp=sharing)
+
+## Presentation Slide:
+  - [Presentation Slide](https://github.com/gopinathsjsu/sp20-cmpe-202-sec-03-team-project-team-404-2/blob/master/docs/CMPE-202-presentation.pptx)
+
+## Contributors: 
+    Xuejun Yao (Roger-Yao8126)
+    Shengtao Li (7seven7lst)
+    Kuang Sheng (cookiebaker444)
+    Yanlin Song (YS-RF)
+
