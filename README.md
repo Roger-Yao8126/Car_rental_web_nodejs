@@ -1,6 +1,6 @@
 
 ## Project Description:
-  This project is a full stack car rental web application following the CMPE-202 group project requirement. This web application provide all the service that a car rental company can provide, and has no age limitation.
+  This project is a full stack web application for a car rental company providing car services from search to reservation.
   
 
 ## Project Architecture and Technical Stacks:
